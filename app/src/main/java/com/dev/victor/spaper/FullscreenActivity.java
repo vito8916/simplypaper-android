@@ -109,7 +109,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     String sdCardDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString();
 
     File rootDir = new File(sdCardDirectory +"/SimplyPaper/");
-    public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
+   // public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
