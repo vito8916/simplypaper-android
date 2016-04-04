@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Victor\AndroidStudioProjects\Spaper\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\1a\dependencies.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="64659de9cddc32de53a65ba6e67c06a86890c3f0">
+        <dex dex="C:\Users\Victor\AndroidStudioProjects\Spaper\app\build\intermediates\transforms\dex\debug\folders\1000\1a\dependencies_2a8f4f21dcda3cefafe0579b36ccc9f4ddcb5dd5\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Victor\AndroidStudioProjects\Spaper\app\build\intermediates\transforms\instantRunSlicer\debug\jars\1\5\main_slice.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="88a641521a79ad568e7b741eb1e8deee58172901">
+        <dex dex="C:\Users\Victor\AndroidStudioProjects\Spaper\app\build\intermediates\transforms\dex\debug\folders\1000\5\main_slice_91ba58bdfcf6310b810de1a108d82ae70d549e0b\classes.dex" />
+    </item>
+
+</items>

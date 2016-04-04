@@ -1,0 +1,158 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shadow="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/material_blue_grey_800"
+    tools:context="com.dev.victor.spaper.FullscreenActivity">
+
+        <RelativeLayout
+            android:id="@+id/fullscreen_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.dev.victor.spaper.TouchImageView
+                android:id="@+id/imgFullscreen"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+            />
+
+            <com.pnikosis.materialishprogress.ProgressWheel
+                android:id="@+id/progress_bar_fullscreen"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                wheel:matProg_barColor="@color/colorAccent"
+                android:visibility="visible"
+                wheel:matProg_progressIndeterminate="true" />
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <com.dev.victor.spaper.util.Fab
+        android:id="@+id/fab2"
+        style="@style/FabMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        app:backgroundTint="@color/colorAccent"
+        app:borderWidth="0dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+
+    <!-- Circular reveal container for the sheet -->
+    <io.codetail.widget.RevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end|bottom"
+        android:orientation="vertical">
+
+        <!-- Sheet that contains your items -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/fab_sheet"
+            android:visibility="gone"
+            style="@style/Widget.MaterialSheetFab.Sheet">
+
+            <!-- Sheet items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- Recording -->
+                <com.balysv.materialripple.MaterialRippleLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+                <TextView
+                    android:id="@+id/fab_sheet_item_wallpaper"
+                    style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                    android:drawableLeft="@mipmap/ic_now_wallpaper_grey600_24dp"
+                    android:drawableStart="@mipmap/ic_now_wallpaper_grey600_24dp"
+                    android:text="@string/wallpaper" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <!-- Reminder -->
+                <TextView
+                    android:id="@+id/fab_sheet_item_establecer"
+                    style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                    android:drawableLeft="@drawable/ic_share_variant_grey600_24dp"
+                    android:drawableStart="@drawable/ic_share_variant_grey600_24dp"
+                    android:text="@string/share" />
+
+
+                <!-- Photo -->
+                <com.balysv.materialripple.MaterialRippleLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+                <TextView
+                    android:id="@+id/fab_sheet_item_download"
+                    style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                    android:drawableLeft="@mipmap/ic_cloud_download_grey600_24dp"
+                    android:drawableStart="@mipmap/ic_cloud_download_grey600_24dp"
+                    android:text="@string/download" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <!-- Note -->
+                <LinearLayout
+                    android:id="@+id/fila_fab_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent">
+
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_back"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@mipmap/ic_arrow_back_grey600_24dp"
+                        android:drawableStart="@mipmap/ic_arrow_back_grey600_24dp"
+                        android:text="@string/back" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </io.codetail.widget.RevealLinearLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+
+</android.support.design.widget.CoordinatorLayout>

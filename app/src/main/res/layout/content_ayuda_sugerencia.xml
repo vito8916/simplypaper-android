@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+
+<RelativeLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:showIn="@layout/activity_ayuda_sugerencia"
+    tools:context="com.dev.victor.spaper.AyudaSugerencia">
+
+
+    <LinearLayout
+        android:id="@+id/ban"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/ayuda_de"
+            android:layout_margin="@dimen/text_margin"
+            android:textColor="@color/text_white_87"
+            android:id="@+id/auda_de" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        card_view:elevation="8dp"
+        android:layout_below="@+id/ban"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardUseCompatPadding="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/app_name"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/appa_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/ayuda_wallpaper"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/Hwallpaper" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/ayuda_compartir"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/Hcompartir" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/ayuda_descargar"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/Hdescargar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/ayuda_definircomo"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/Hdefinircomo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/ayuda_secciondescargas"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/Hs_descargas" />
+
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card2"
+        android:layout_below="@+id/card1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/about_card_margin"
+        android:layout_marginRight="@dimen/about_card_margin"
+        android:layout_marginBottom="10dp"
+        card_view:elevation="8dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardUseCompatPadding="true"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/sugerencias"
+                android:layout_margin="@dimen/text_margin"
+                android:textColor="@color/cardview_dark_background"
+                android:id="@+id/Sugerencias" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_input_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                app:errorEnabled="true"
+                >
+
+
+                        <EditText
+                            android:id="@+id/content_text_input_nombre"
+                            android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:inputType="textAutoComplete|textPersonName|textAutoCorrect"
+                             android:hint="Nombre"/>
+
+
+                     </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_input_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                app:errorEnabled="true"
+                >
+
+                <EditText
+                android:id="@+id/content_text_input_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoComplete|textPersonName|textAutoCorrect"
+                android:hint="Titulo"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/text_input_comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                app:errorEnabled="true"
+                >
+
+                <EditText
+                    android:id="@+id/content_text_input_comentario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage|textAutoComplete|textAutoCorrect|textMultiLine"
+                    android:hint="Comment"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnEnviar"
+
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR"
+
+                android:layout_marginBottom="10dp"
+                />
+
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

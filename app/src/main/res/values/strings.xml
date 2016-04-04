@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Simply Paper</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- categories -->
+    <string name="category_all">All</string>
+    <string name="category_music">Musica</string>
+    <string name="category_tecnologia">Tecnologia</string>
+    <string name="category_section_categories">CATEGORIAS</string>
+    <string name="category_minimalista">Minimalistas</string>
+    <string name="category_degradados">Degradados</string>
+    <string name="category_vehiculos">Vehiculos</string>
+    <string name="category_landscape">Landscape</string>
+    <string name="category_animals">Animales</string>
+
+    <!-- navigationView -->
+    <string name="donwload">Descargas</string>
+    <string name="home">Inicio</string>
+    <string name="setting">Ajustes</string>
+    <string name="about">Acerca de</string>
+    <string name="gplus">Comunidad G+</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="legal">Información legal</string>
+
+    <string name="comparte_spapr">Compatir Spaper </string>
+
+
+    <!-- Tabs -->
+    <string name="tab_categorias">CATEGORIAS</string>
+    <string name="tab_todas">TODAS</string>
+    <string name="tab_nuevas">NUEVAS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="title_activity_actividad_descargas" translatable="false">Descargas</string>
+    <string name="title_activity_actividad_detalle_categoria" translatable="false">ActividadDetalleCategoria</string>
+    <string name="title_activity_detalle">Detalle</string>
+    <string name="title_activity_actividad_de_prueba" translatable="false">ActividadDePrueba</string>
+
+    <string name="title_activity_fullscreen" translatable="false">FullscreenActivity</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+
+    <!-- opciones de floating button  -->
+    <string name="back">Regresar</string>
+    <string name="wallpaper">Fondo de Pantalla</string>
+    <string name="share">Compartir</string>
+    <string name="download">Descargar</string>
+    <string name="establece_como">Establecer como</string>
+
+    <!-- Acerca de -->
+    <string name="slogan">Imagenes simples, pantallas perfectas.</string>
+    <string name="appversion"> Versión: 1.4</string>
+    <string name="copyright">Copyright © 2015 Simply Paper. \n
+        All right reserved. </string>
+    <string name="descripcion">Simply Paper es una aplicación que te ofrece imagenes e ilustraciones
+        simples y minimalistas para que puedas decorar tu pantalla y que esta se vea hermosa. Simply Paper
+        cuenta con multiples categorias para que navegues facilmente entre ellas y puedas encontrar fabulosas
+        ilustraciones de acuerdo a tus gustos.
+
+    </string>
+    <string name="devabout">Acerca del Desarrollador.</string>
+    <string name="devname" translatable="false">Víctor Alvarado.</string>
+    <string name="devtitle">Desarrollador Android.</string>
+    <string name="design">Diseñador Gráfico.</string>
+    <string name="devemail" translatable="false">email: vito8916@gmail.com</string>
+    <string name="agradecimiento">Agradecimientos</string>
+    <string name="freepick" translatable="false">Freepik</string>
+    <string name="freepickdescrip">Recursos gráficos gratuitos para diseñadores.</string>
+    <string name="flickr" translatable="false">Flickr</string>
+    <string name="flickrtnks">La mejor aplicación para compartir fotos en línea).</string>
+    <string name="ventajas">
+        En Simply Paper sabemos que a la hora de personalizar nuestros fondos de pantallas queremos poder escoger
+        entre una gran variedad de imagenes, por eso es que en Simply Paper semanalmente actualizaremos nuestra
+        base de datos de imagenes y subiremos nuevas ilustraciones.
+    </string>
+
+    <!-- Ayuda y sugerencias -->
+    <string name="ayuda_de">Ayuda de Simply Paper</string>
+    <string name="ayuda_wallpaper">Fondo de pantalla</string>
+    <string name="ayuda_descargar">Descargar imagen</string>
+    <string name="ayuda_compartir">Compartir imagen</string>
+    <string name="ayuda_definircomo">Definir imagen como..</string>
+    <string name="ayuda_secciondescargas">Sección Descargas</string>
+    <string name="sugerencias">Sugerencias</string>
+    <string name="sugerenci_error">Este campo no puede estar vacio</string>
+
+    <!-- Mensajes -->
+    <string name="image_save">Imagen Guardada</string>
+    <string name="downloading">Descargando</string>
+    <string name="setwallpaper">Estableciendo Wallpaper</string>
+    <string name="msg_setaswallpaper">La imagen se estableció correctamente.</string>
+    <string name="msg_err_setaswallpaper">Hubo un error! Intentalo luego.</string>
+    <string name="error_download">Ocurrió un error en la descarga</string>
+    <string name="error_loading_img">Ocurrió un error. No se puedo obtener la imagen</string>
+    <string name="networkNoavalible">Conexión No Disponible.</string>
+
+    <string name="title_activity_acercade">Acerca de</string>
+
+    <string name="title_activity_fullscreen_descargas" translatable="false">Descargas</string>
+    <string name="title_activity_ayuda_sugerencia">Ayuda y Sugerencias</string>
+    <string name="title_activity_ayuda">Ayuda</string>
+
+    <string name="youtubekey" translatable="false">AIzaSyAJWALsW-MvI2mXpEhYbt3wWOq_8kfttlw</string>
+
+    <string name="sharespaper">Prueba Simply Paper y presume de tener los mejores fondos de pantalla.\n </string>
+    <string name="compatidaatraves">Imagen compartida a través de Simply Paper</string>
+    <string name="interneterror">Algo salio mal. Revisa tu conexión a internet.</string>
+
+    <string name="terminos">Esta aplicación, como también su contenido estan sujetas a las leyes de derechos de autor
+                            quedando prohibido:\n\ncopiar, reproducir, distribuir, publicar, transmitir, difundir o de algún modo
+                            explotar comercialmente cualquier parte de esta aplicación y su contenido sin la autorización
+                            previa del desarrollador o de los titulares correspondientes.\n\nSin embargo, usted podrá descargar material a su celular o computadora para uso exclusivamente personal
+                            y no comercial.\n\nVíctor Alvarado es el titular exclusivo de la aplicación para poder explotar con cualquier fin comercial las imágenes que en esta se encuentran.</string>
+
+    <string name="terminoscondiciones">Términos y Condiciones</string>
+    <string name="pressback">Presione otra vez para salir!</string>
+    <string name="intro1">Bienvenido a Simply Paper</string>
+    <string name="intro1des">Imágenes simples, pantallas perfectas</string>
+    <string name="intro2">100+ Wallpapers</string>
+    <string name="intro2des">Contamos con una gran variedad de wallpapers y cada semana subimos nuevos</string>
+    <string name="intro3">Imagenes inteligentes</string>
+    <string name="intro3des">No necesitas cortar las imágenes, ellas se adaptan a tu pantalla</string>
+    <string name="intro4">Descarga o comparte Imágenes</string>
+    <string name="intro4des">Descarga a tu smartphone o comparte imágenes con tus amigos</string>
+    <string name="intro5">Estas listo para una pantalla alucinante?</string>
+    <string name="intro5des">Explora entre todas las imáganes que hemos diseñado para ti y elige tus favoritas</string>
+
+    <string name="emprtydonwloadtext">No has descargado ninguna imágen.</string>
+
+    <string name="webpage">Página Web</string>
+    <string name="cancel_downloding_img">Descarga Cancelada.</string>
+
+    <!-- MENSAJES PARA PERMISOS -->
+    <string name="permisoConcedido">Permisos Concedidos</string>
+    <string name="permisoDenegado">Permisos Denegados \n</string>
+    <string name="permisoMsjRechazo">Sí rechazas los permisos,no podrás usar algunos servicios. \n Por favor activa los permisos en [Ajustes] > [Permisos]</string>
+    <string name="permisosGuardarMsj">Se necesitan Permisos para Descargar las imágenes.</string>
+
+</resources>

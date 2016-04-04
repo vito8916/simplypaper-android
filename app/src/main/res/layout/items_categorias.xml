@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cartaCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:id="@+id/rlitemcategoria"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/img_categoria"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:scaleType="centerCrop"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+
+                android:id="@+id/titulo_categoria"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/img_categoria"
+                android:layout_toEndOf="@+id/img_categoria"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/descrip_categoria"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/titulo_categoria"
+                android:layout_alignStart="@+id/titulo_categoria" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/NumFotos"
+                android:layout_alignTop="@+id/img_categoria"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:padding="16dp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

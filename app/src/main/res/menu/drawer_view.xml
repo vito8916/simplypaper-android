@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_descargas"
+            android:icon="@drawable/ic_folder_download_grey600_24dp"
+            android:title="@string/donwload" />
+
+
+
+        <!-- Sección de configuración -->
+        <item
+            android:id="@+id/configuration_section"
+            android:title="Otros">
+            <menu>
+                <item
+                    android:id="@+id/nav_acercade"
+                    android:icon="@drawable/ic_information_grey600_24dp"
+                    android:title="@string/about" />
+                <item
+                    android:id="@+id/nav_ayuda"
+                    android:icon="@drawable/ic_help_circle_grey600_24dp"
+                    android:title="@string/ayuda" />
+                <item
+                    android:id="@+id/nav_legal"
+                    android:icon="@drawable/ic_lock_grey600_24dp"
+                    android:title="@string/legal" />
+
+            </menu>
+        </item>
+    </group>
+</menu>
