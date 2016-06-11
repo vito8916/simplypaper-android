@@ -4,8 +4,10 @@ package com.dev.victor.spaper.util;
  * Created by Victor on 18/09/2015.
  */
 import android.graphics.Bitmap;
+import android.text.TextUtils;
 import android.util.LruCache;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
@@ -16,7 +18,8 @@ public class VolleySingleton {
     private static VolleySingleton mInstance = null;
     private RequestQueue mRQ;
     private ImageLoader mIL;
-
+    public static final String TAG = VolleySingleton.class
+            .getSimpleName();
     private VolleySingleton()
     {
         mRQ = Volley.newRequestQueue(MainActivity.getAppContext());
@@ -50,6 +53,23 @@ public class VolleySingleton {
     public ImageLoader getImageLoader()
     {
         return mIL;
+    }
+
+    public <T> void addToRequestQueue(Request<T> req, String tag) {
+        // asigna un valor a tag si tag está vacío
+        req.setTag(TextUtils.isEmpty(tag) ? TAG : tag);
+        getRequestQueue().add(req);
+    }
+
+    public <T> void addToRequestQueue(Request<T> req) {
+        req.setTag(TAG);
+        getRequestQueue().add(req);
+    }
+
+    public void cancelPendingRequests(Object tag) {
+        if (mRQ != null) {
+            mRQ.cancelAll(tag);
+        }
     }
 
 }

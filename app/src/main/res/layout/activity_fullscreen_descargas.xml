@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:src="@mipmap/ic_more_vert_white_24dp"
         app:backgroundTint="@color/colorAccent"
         app:borderWidth="0dp"
         android:visibility="gone"
@@ -109,6 +109,7 @@
 
                     <TextView
                         android:id="@+id/fab_sheet_item_back3"
+                        android:textColor="@color/text_white_87"
                         style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
                         android:drawableLeft="@mipmap/ic_arrow_back_grey600_24dp"
                         android:drawableStart="@mipmap/ic_arrow_back_grey600_24dp"

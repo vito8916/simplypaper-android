@@ -11,6 +11,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,8 @@ import com.dev.victor.spaper.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import es.dmoral.prefs.Prefs;
 
 /**
  * Created by Victor on 20/09/2015.
@@ -67,6 +70,7 @@ public class FragmentoContenedor extends Fragment {
 
             pestanas.setTabTextColors(Color.parseColor("#FFFFFF"), Color.parseColor("#FFFFFF"));
             pestanas.setupWithViewPager(viewPager);
+            pestanas.setSelectedTabIndicatorColor(ContextCompat.getColor(context,Prefs.with(context).readInt("accentColorByTheme")));
 
         }
 

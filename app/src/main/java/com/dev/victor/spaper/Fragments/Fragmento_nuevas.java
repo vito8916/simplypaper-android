@@ -3,8 +3,11 @@ package com.dev.victor.spaper.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -23,6 +26,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 
 import com.dev.victor.spaper.Adapters.AdaptadorCategorias;
 import com.dev.victor.spaper.Adapters.AdaptadorNuevas;
+import com.dev.victor.spaper.FullScreenActivity2;
 import com.dev.victor.spaper.FullscreenActivity;
 import com.dev.victor.spaper.R;
 import com.dev.victor.spaper.util.FeedItemNuevas;
@@ -37,6 +41,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.prefs.Prefs;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
 import jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
@@ -89,13 +94,18 @@ public class Fragmento_nuevas extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragmento_nuevas, container, false);
         context = view.getContext();
+        PreferenceManager.setDefaultValues(getActivity(), R.xml.ajustes, false);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        int numOfColumn = sharedPref.getInt(getString(R.string.key_nunofcolumn_pref),2);
+
         String urlGaleria = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=3a486f912da87a2011d3f5a03e01be7c&user_id=134427773%40N06&per_page=10&extras=original_format&format=json&nojsoncallback=1";
         mRecyclerView = (RecyclerView)view.findViewById(R.id.reciclador);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),numOfColumn));
         mRecyclerView.setItemAnimator(new ScaleInAnimator());
 
         progressBar = (ProgressWheel) view.findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.VISIBLE);
+        progressBar.setBarColor(ContextCompat.getColor(context, Prefs.with(getActivity()).readInt("accentColorByTheme")));
         feedsList = new ArrayList<>();
 
         JsonObjectRequest jor = new JsonObjectRequest(
@@ -129,7 +139,7 @@ public class Fragmento_nuevas extends Fragment {
                                     // TODO Handle item click
                                     Log.e("@@@@@", "" + position);
 
-                                    Intent detalles = new Intent(context, FullscreenActivity.class);
+                                    Intent detalles = new Intent(context, FullScreenActivity2.class);
                                     try {
                                         detalles.putExtra("detalles", fotos.getJSONObject(position).toString());
 

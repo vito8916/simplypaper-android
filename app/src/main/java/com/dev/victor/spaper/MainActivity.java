@@ -2,9 +2,14 @@ package com.dev.victor.spaper;
 
 
 import android.Manifest;
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -16,26 +21,35 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.dev.victor.spaper.Fragments.FragmentoContenedor;
 import com.dev.victor.spaper.Fragments.FragmentoCopyright;
 import com.dev.victor.spaper.Fragments.Fragmento_descargas;
+import com.dev.victor.spaper.preferences.PrefActivity;
+import com.dev.victor.spaper.preferences.PreferenciasMD;
+import com.dev.victor.spaper.gcm.QuickstartPreferences;
+import com.dev.victor.spaper.gcm.RegistrationIntentService;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
 import java.util.ArrayList;
+
+import es.dmoral.prefs.Prefs;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,9 +60,17 @@ public class MainActivity extends AppCompatActivity {
     private View content;
     private static long back_pressed;
 
+    //GCM CONFIG VARIABLES
+    public static String Correo;
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private static final String TAG = "MainActivity";
+
+    private BroadcastReceiver mRegistrationBroadcastReceiver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(Prefs.with(getApplicationContext()).readInt("themesetup"));
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
         content = findViewById(R.id.contenedor_principal);
@@ -57,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences getPrefs2 = PreferenceManager
                 .getDefaultSharedPreferences(getBaseContext());
         boolean isFirstStart2 = getPrefs2.getBoolean("firstStart", true);
+
+
 
 
         //  Declare a new thread to do a preference check
@@ -104,6 +128,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        // CONFIGURACION DE GOOGLE CLOUD MESSAGE
+        mRegistrationBroadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+                boolean sentToken = sharedPreferences.getBoolean(QuickstartPreferences.SENT_TOKEN_TO_SERVER, false);
+                if (sentToken) {
+                    Log.d("SE Registró: ",getString(R.string.gcm_send_message));
+                } else {
+                    Log.d("NO se Regitro: ",getString(R.string.token_error_message));
+                }
+            }
+        };
+
+        //txtRegid = (TextView)findViewById(R.id.textView);
+        Correo = getAccount(AccountManager.get(getApplicationContext()));
+
+
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(this, RegistrationIntentService.class);
+            startService(intent);
+        }
+
 
 
     }
@@ -129,7 +177,12 @@ public class MainActivity extends AppCompatActivity {
         new TedPermission(this)
                 .setPermissionListener(permissionlistener)
                 .setDeniedMessage(getString(R.string.permisoMsjRechazo))
-                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.WAKE_LOCK,Manifest.permission.READ_EXTERNAL_STORAGE)
+                .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.WAKE_LOCK,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.ACCOUNT_MANAGER,
+                        Manifest.permission.GET_ACCOUNTS,
+                        Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE)
                 .check();
 
     }
@@ -186,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_ayuda:
                 // Iniciar actividad de configuración
-                Intent ayuda = new Intent(getAppContext(),AyudaSugerencia.class);
+                Intent ayuda = new Intent(getAppContext(),PrefActivity.class);
                 startActivity(ayuda);
                 break;
             case R.id.nav_legal:
@@ -294,4 +347,89 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver, new IntentFilter(QuickstartPreferences.REGISTRATION_COMPLETE));
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+        super.onPause();
+    }
+
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            } else {
+                Log.i(TAG, "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
+
+
+    //Metodo para obtener el correo principal del usuario.
+    private String getAccount(AccountManager accountManager) {
+
+        Account[] accounts = accountManager.getAccounts();
+        Account account;
+        //String emailId;
+        String emailComplete;
+        if (accounts.length > 0) {
+            account = accounts[0];
+            emailComplete = account.name;
+            Toast.makeText(context,emailComplete,Toast.LENGTH_LONG).show();
+            //emailId = emailComplete.substring(0,emailComplete.lastIndexOf("@"));
+        } else {
+           //// emailId = "ejemplo@gmail.com";
+            emailComplete = "ejemplo@gmail.com";
+            Toast.makeText(context,emailComplete,Toast.LENGTH_LONG).show();
+        }
+        return emailComplete;
+    }
+
+    public int cambiartema(){
+        int tema = 0;
+
+        PreferenceManager.setDefaultValues(this, R.xml.ajustes, false);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        int syncConnPref = sharedPref.getInt("color_key",0);
+
+
+
+
+        if(syncConnPref == ContextCompat.getColor(getApplicationContext(),R.color.colorPrimary)){
+            tema = R.style.AppTheme;
+            Prefs.with(getApplicationContext()).writeInt("accentColorByTheme", R.color.colorAccent);
+            Prefs.with(getApplicationContext()).writeInt("themesetup",R.style.AppTheme);
+        }
+        else if(syncConnPref == ContextCompat.getColor(getApplicationContext(),R.color.primaryColor2)){
+            tema = R.style.AppTheme2;
+            Prefs.with(getApplicationContext()).writeInt("accentColorByTheme", R.color.primaryColorAccent2);
+            Prefs.with(getApplicationContext()).writeInt("themesetup",R.style.AppTheme2);
+
+        }else if(syncConnPref == ContextCompat.getColor(getApplicationContext(),R.color.primaryColor3) ){
+            tema = R.style.AppTheme3;
+            Prefs.with(getApplicationContext()).writeInt("accentColorByTheme", R.color.primaryColorAccent3);
+            Prefs.with(getApplicationContext()).writeInt("themesetup",R.style.AppTheme3);
+        }else if(syncConnPref == ContextCompat.getColor(getApplicationContext(),R.color.primaryColor4) ){
+            tema = R.style.AppTheme4;
+            Prefs.with(getApplicationContext()).writeInt("accentColorByTheme", R.color.primaryColorAccent4);
+            Prefs.with(getApplicationContext()).writeInt("themesetup",R.style.AppTheme4);
+        }
+
+
+        return tema;
+    }
+
 }

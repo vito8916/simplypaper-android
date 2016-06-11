@@ -20,17 +20,23 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
 
         >
 
         <LinearLayout
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:orientation="vertical"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
             >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/copyright1_card"
@@ -74,17 +80,14 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            </LinearLayout>
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_gravity="center_horizontal"
                 android:background="@color/material_grey_300"
-                android:gravity="center"
-                android:layout_below="@id/copyright1_card"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,6 +101,7 @@
                     android:layout_marginBottom="4dp"
                     android:textColor="#a4a4a4" />
             </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>

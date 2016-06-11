@@ -2,6 +2,7 @@ package com.dev.victor.spaper.Adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,6 +24,8 @@ import com.squareup.picasso.Transformation;
 import org.json.JSONObject;
 
 import java.util.List;
+
+import es.dmoral.prefs.Prefs;
 
 /**
  * Created by Victor on 21/09/2015.
@@ -55,7 +58,7 @@ public class AdaptadorCategorias extends RecyclerView.Adapter<AdaptadorCategoria
         int colorripple = R.color.colorripple;
 
         MaterialRippleLayout.on(rlitemcategoria)
-                .rippleColor(Color.parseColor("#FF4081"))
+                .rippleColor(ContextCompat.getColor(mContext,Prefs.with(mContext).readInt("accentColorByTheme")))
                 .rippleOverlay(true)
                 .rippleAlpha(0.2f)
                 .rippleHover(true)

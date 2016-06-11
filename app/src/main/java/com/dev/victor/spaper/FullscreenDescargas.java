@@ -1,6 +1,5 @@
 package com.dev.victor.spaper;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Intent;
@@ -10,21 +9,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 
-import android.support.v8.renderscript.Allocation;
-import android.support.v8.renderscript.Element;
-import android.support.v8.renderscript.RenderScript;
-import android.support.v8.renderscript.ScriptIntrinsicBlur;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -49,7 +44,6 @@ import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -60,6 +54,7 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
     TouchImageView imgfulldescargas;
     private View mContentView;
     private MaterialSheetFab materialSheetFab;
+    View vWallpaper, vSetas, vShared, vBack;
     View.OnClickListener mOnClickListener;
     String nombreIMG;
 
@@ -84,35 +79,27 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
         Intent intent = getIntent();
 
 
-
-        //mBlurringView = (BlurringView) findViewById(R.id.blurring_view);
-
-        w = getWindowManager();
-        d = w.getDefaultDisplay();
+        //OBTNER EL TAMAÑO DE LA PANTALLA DEL SMARTPHONE
         metrics = new DisplayMetrics();
-        d.getMetrics(metrics);
-        widthPixels  = metrics.widthPixels;
-        heightPixels = metrics.heightPixels;
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        height = metrics.heightPixels;
+        width = metrics.widthPixels;
 
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        height = displaymetrics.heightPixels;
-        width = displaymetrics.widthPixels;
-
-        // includes window decorations (statusbar bar/menu bar)
         if (Build.VERSION.SDK_INT >= 14) {
             try {
                 Point realSize = new Point();
-                Display.class.getMethod("getRealSize", Point.class).invoke(d, realSize);
-                widthPixels = realSize.x;
-                heightPixels = realSize.y;
+                Display.class.getMethod("getRealSize", Point.class).invoke(metrics, realSize);
+
+                width = realSize.x;
+                height = realSize.y;
             } catch (Exception ignored) {
             }
         }
+
         imgfulldescargas = (TouchImageView) findViewById(R.id.imgfullDescargas);
         final Animation ani4 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-        RelativeLayout.LayoutParams parms = new RelativeLayout.LayoutParams(width,height);
-        imgfulldescargas.setLayoutParams(parms);
+       // RelativeLayout.LayoutParams parms = new RelativeLayout.LayoutParams(width,height);
+       // imgfulldescargas.setLayoutParams(parms);
 
         final Fab fab = (Fab)findViewById(R.id.fab3);
 
@@ -127,14 +114,12 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
         options.inPreferredConfig = Bitmap.Config.RGB_565;
         bitmap20 = BitmapFactory.decodeFile(img,options);
 
-        hide();
 
         Picasso.with(getApplicationContext())
                 .load(imageFile)
                 .tag(this)
                 .memoryPolicy(MemoryPolicy.NO_CACHE)
                 .noFade()
-
                 .into(imgfulldescargas, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -213,26 +198,26 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
         // Set the content to appear under the system bars so that the content
         // doesn't resize when the system bars hide and show.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mContentView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            //| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            // | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
+            View decorView = getWindow().getDecorView();
+            // Hide both the navigation bar and the status bar.
+            // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
+            // a general rule, you should design your app to hide the status bar whenever you
+            // hide the navigation bar.
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            decorView.setSystemUiVisibility(uiOptions);
+
+        }
 
         if (Build.VERSION.SDK_INT <= 18) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-           /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-            }*/
+
 
 
     }
@@ -242,7 +227,9 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
         final Animation ani3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_in);
 
         Fab fab = (Fab)findViewById(R.id.fab3);
-        fab.show();
+        if (fab != null) {
+            fab.show();
+        }
         fab.setAnimation(ani3);
 
     }
@@ -265,7 +252,7 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
                             .animate(300)
                             .color(R.color.blur)
                             .async()
-                            .onto((ViewGroup) findViewById(R.id.contentfull));
+                            .onto((ViewGroup) mContentView);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -278,16 +265,23 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
             @Override
             public void onHideSheet() {
 
-                Blurry.delete((ViewGroup) findViewById(R.id.contentfull));
+                Blurry.delete((ViewGroup) mContentView);
                 super.onHideSheet();
             }
         });
 
         //SET ONCLICK LISTENER PARA LOS ELEMENTOS DEL FLOATING BUTTON
-        findViewById(R.id.fab_sheet_item_wallpaper3).setOnClickListener(this);
-        findViewById(R.id.fab_sheet_item_compartir).setOnClickListener(this);
-        findViewById(R.id.fab_sheet_item_set_as).setOnClickListener(this);
-        findViewById(R.id.fab_sheet_item_back3).setOnClickListener(this);
+
+        vWallpaper = findViewById(R.id.fab_sheet_item_wallpaper3);
+        vShared = findViewById(R.id.fab_sheet_item_compartir);
+        vSetas = findViewById(R.id.fab_sheet_item_set_as);
+        vBack = findViewById(R.id.fab_sheet_item_back3);
+
+        vWallpaper.setOnClickListener(this);
+        vShared.setOnClickListener(this);
+        vSetas.setOnClickListener(this);
+        vBack.setOnClickListener(this);
+
     }
 
 
@@ -336,10 +330,10 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
 
         try {
 
-                Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
+                //Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
                 wpManager.setWallpaperOffsetSteps(1, 1);
-                wpManager.suggestDesiredDimensions(bitmapResized.getWidth(), bitmapResized.getHeight());
-                wpManager.setBitmap(bitmapResized);
+                wpManager.suggestDesiredDimensions(width, height);
+                wpManager.setBitmap(bitmap);
 
 
 
@@ -350,10 +344,11 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
 
         if (success) {
             //stopProgressAsWallpaper();
-            Snackbar.make(findViewById(R.id.contentfull),getResources().getString(R.string.msg_setaswallpaper),Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(mContentView,getResources().getString(R.string.msg_setaswallpaper),Snackbar.LENGTH_SHORT).show();
+            executeDelayed();
 
         } else {
-            Snackbar.make(findViewById(R.id.contentfull), getResources().getString(R.string.msg_err_setaswallpaper), Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(mContentView, getResources().getString(R.string.msg_err_setaswallpaper), Snackbar.LENGTH_SHORT).show();
         }
     }
 
@@ -413,6 +408,25 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
     private void imageError(Exception e) {
         Toast.makeText(getApplicationContext(), getString(R.string.interneterror), Toast.LENGTH_SHORT).show();
         e.printStackTrace();
+    }
+
+    @Override
+    public void onResume(){
+        hide();
+
+        super.onResume();
+    }
+
+    //POST DELAY PARA EJECUTAR EL METODO HIDE() DESPUES DE UNOS SEGUNDOS
+    private void executeDelayed() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // execute after 500ms
+                hide();
+            }
+        }, 800);
     }
 
 

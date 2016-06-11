@@ -14,6 +14,7 @@
             android:id="@+id/fullscreen_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <com.dev.victor.spaper.TouchImageView
                 android:id="@+id/imgFullscreen"
                 android:layout_width="fill_parent"

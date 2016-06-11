@@ -3,14 +3,17 @@ package com.dev.victor.spaper.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -33,6 +36,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import com.dev.victor.spaper.Adapters.AdaptadorTodas;
+import com.dev.victor.spaper.FullScreenActivity2;
 import com.dev.victor.spaper.FullscreenActivity;
 import com.dev.victor.spaper.MainActivity;
 import com.dev.victor.spaper.R;
@@ -49,6 +53,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.prefs.Prefs;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
 import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
@@ -132,6 +137,7 @@ public class Fragmento_todas extends Fragment {
         txtRetry = (TextView)view.findViewById(R.id.txtRetry);
         progressBar = (ProgressWheel) view.findViewById(R.id.progress_bar_todas);
         progressBar.setVisibility(View.VISIBLE);
+        progressBar.setBarColor(ContextCompat.getColor(context,Prefs.with(getActivity()).readInt("accentColorByTheme")));
         feedsList = new ArrayList<>();
 
         //CHECK NETWORKCONNECTION
@@ -179,7 +185,8 @@ public class Fragmento_todas extends Fragment {
             }
         });
 
-        mSwipyRefreshLayout.setColorSchemeResources(R.color.colorAccent);
+
+        mSwipyRefreshLayout.setColorSchemeResources(Prefs.with(getActivity()).readInt("accentColorByTheme"));
         mSwipyRefreshLayout.post(new Runnable() {
             @Override
             public void run() {
@@ -189,9 +196,12 @@ public class Fragmento_todas extends Fragment {
             }
         });
 
+        PreferenceManager.setDefaultValues(getActivity(), R.xml.ajustes, false);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        int numOfColumn = sharedPref.getInt(getString(R.string.key_nunofcolumn_pref),2);
 
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recicladorTodas);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),numOfColumn));
         mRecyclerView.setOnTouchListener(
                 new View.OnTouchListener() {
                     @Override
@@ -214,7 +224,7 @@ public class Fragmento_todas extends Fragment {
                         // TODO Handle item click
                         Log.e("@@@@@", "" + position);
 
-                        Intent detalles = new Intent(context, FullscreenActivity.class);
+                        Intent detalles = new Intent(context, FullScreenActivity2.class);
                         try {
                             detalles.putExtra("detalles", fotos.getJSONObject(position).toString());
 

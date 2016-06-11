@@ -2,6 +2,7 @@ package com.dev.victor.spaper.Adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,8 @@ import com.dev.victor.spaper.util.FeedItemAlbum;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import es.dmoral.prefs.Prefs;
 
 /**
  * Created by Victor on 29/09/2015.
@@ -42,9 +45,10 @@ public class AdaptadorAlbum extends RecyclerView.Adapter<AdaptadorAlbum.CustomVi
         RelativeLayout rlitemcategoria = (RelativeLayout)view.findViewById(R.id.item_categoria_detalle_ripple);
         //ripple
         int colorripple = R.color.colorripple;
+        int colorripple2 = Prefs.with(mContext).readInt("accentColorByTheme");
 
         MaterialRippleLayout.on(rlitemcategoria)
-                .rippleColor(Color.parseColor("#FF4081"))
+                .rippleColor(ContextCompat.getColor(mContext,Prefs.with(mContext).readInt("accentColorByTheme")))
                 .rippleOverlay(true)
                 .rippleAlpha(0.2f)
                 .rippleHover(true)

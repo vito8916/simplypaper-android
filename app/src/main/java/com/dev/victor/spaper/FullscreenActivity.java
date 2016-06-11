@@ -26,6 +26,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -90,16 +91,14 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
     RequestQueue requestQueue;
     private ProgressDialog mProgress;
     ColorPalette colorPalette;
-    WindowManager w;
-    Display d;
-    int widthPixels;
-    int heightPixels;
-    int height;
-    int width;
+
+
     Bitmap.Config bconfig; //variable para manejar la compresion de las imagagenes segun el HEADSIZE de java
 
 
     DisplayMetrics metrics;
+    int height;
+    int width;
 
     //initialize our progress dialog/bar
     ProgressDialog mProgressDialog;
@@ -118,27 +117,36 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_fullscreen);
         ImgFulscreen = (TouchImageView)findViewById(R.id.imgFullscreen);
         mContentView = findViewById(R.id.fullscreen_content);
-        w = getWindowManager();
-        d = w.getDefaultDisplay();
+
+
+
         metrics = new DisplayMetrics();
-        d.getMetrics(metrics);
-        widthPixels  = metrics.widthPixels;
-        heightPixels = metrics.heightPixels;
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        height = metrics.heightPixels;
+        width = metrics.widthPixels;
+
 
 
         final Animation ani4 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
-            DisplayMetrics displaymetrics = new DisplayMetrics();
-            getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-            height = displaymetrics.heightPixels;
-            width = displaymetrics.widthPixels;
+
+
 
         // includes window decorations (statusbar bar/menu bar)
+        // w = getWindowManager();
+        // d = w.getDefaultDisplay();
+        // d.getMetrics(metrics);
+        //widthPixels  = metrics.widthPixels;
+        //heightPixels = metrics.heightPixels;
+        //DisplayMetrics displaymetrics = new DisplayMetrics();
+
         if (Build.VERSION.SDK_INT >= 14) {
             try {
                 Point realSize = new Point();
-                Display.class.getMethod("getRealSize", Point.class).invoke(d, realSize);
-                widthPixels = realSize.x;
-                heightPixels = realSize.y;
+                Display.class.getMethod("getRealSize", Point.class).invoke(metrics, realSize);
+                //widthPixels = realSize.x;
+               // heightPixels = realSize.y;
+                width = realSize.x;
+                height = realSize.y;
             } catch (Exception ignored) {
             }
         }
@@ -356,6 +364,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
 
     //METODO PARA OCULTAR EL ACTION BAR O FULLSCREEN
     private void hide() {
+
         // Hide UI first
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -365,27 +374,22 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
         // Set the content to appear under the system bars so that the content
         // doesn't resize when the system bars hide and show.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-        mContentView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        //| View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                       // | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
+
+
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE;
+            decorView.setSystemUiVisibility(uiOptions);
+        }
 
         if (Build.VERSION.SDK_INT <= 18) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
-           /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                mContentView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-            }*/
-
 
     }
 
@@ -456,19 +460,19 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
                     @Override
                     public void onResponse(Bitmap bitmap) {
                         boolean success = false;
-                        WallpaperManager wpManager = WallpaperManager.getInstance(getApplicationContext());
+                        WallpaperManager wpManager = WallpaperManager.getInstance(getBaseContext());
 
                         try {
                             if(Build.VERSION.SDK_INT < 19){
                                 Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
                                 wpManager.setWallpaperOffsetSteps(1, 1);
-                                wpManager.suggestDesiredDimensions(bitmapResized.getWidth(), bitmapResized.getHeight());
+                                wpManager.suggestDesiredDimensions(width, height);
                                 wpManager.setBitmap(bitmapResized);
                             }else{
                                 Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
                                 wpManager.setWallpaperOffsetSteps(1, 1);
-                                wpManager.suggestDesiredDimensions(bitmapResized.getWidth(), bitmapResized.getHeight());
-                                wpManager.setBitmap(bitmapResized);
+                                wpManager.suggestDesiredDimensions(width, height);
+                                wpManager.setBitmap(bitmap);
                             }
 
                             success = true;

@@ -123,7 +123,7 @@ public class ActividadDetalleCategoria extends AppCompatActivity {
                                     // TODO Handle item click
                                     Log.e("@@@@@", "" + position);
 
-                                    Intent detalles = new Intent(context, FullscreenActivity.class);
+                                    Intent detalles = new Intent(context, FullScreenActivity2.class);
                                     try {
                                         detalles.putExtra("detalles", fotos.getJSONObject(position).toString());
 

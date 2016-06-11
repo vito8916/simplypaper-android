@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -34,6 +35,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.dmoral.prefs.Prefs;
 import jp.wasabeef.recyclerview.animators.FadeInAnimator;
 import jp.wasabeef.recyclerview.animators.FadeInDownAnimator;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
@@ -94,6 +96,10 @@ public class FragmentoCategorias extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_fragmento_categorias, container, false);
         context = view.getContext();
+        progressBar = (ProgressWheel) view.findViewById(R.id.progress_bar_categorias);
+        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setBarColor(ContextCompat.getColor(context, Prefs.with(getActivity()).readInt("accentColorByTheme")));
+
         String urlALbums = "https://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=3a486f912da87a2011d3f5a03e01be7c&user_id=134427773%40N06&format=json&nojsoncallback=1";
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recicladorCategorias);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -107,7 +113,7 @@ public class FragmentoCategorias extends Fragment {
                 Request.Method.GET,urlALbums,null,new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                view.findViewById(R.id.progress_bar_categorias).setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
                 try {
                     categorias = response.getJSONObject("photosets").getJSONArray("photoset");
                     objectos = new JSONObject[categorias.length()];

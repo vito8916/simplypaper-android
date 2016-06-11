@@ -4,8 +4,8 @@
     <string name="about">About</string>
     <string name="action_settings">Setting</string>
     <string name="agradecimiento">Thanks to</string>
-    <string name="appversion">Version: 1.4</string>
-    <string name="ayuda">Help</string>
+    <string name="appversion">Version: 2,0</string>
+    <string name="ayuda">Setting</string>
     <string name="ayuda_compartir">Share image</string>
     <string name="ayuda_de">Help -Simply Paper</string>
     <string name="ayuda_definircomo">Set image as</string>
@@ -23,7 +23,7 @@
     <string name="category_tecnologia">Technology</string>
     <string name="category_vehiculos">Vehicles</string>
     <string name="comparte_spapr">Share Spaper</string>
-    <string name="copyright">Copyright © 2015 Simply Paper. \n         All right reserved.</string>
+    <string name="copyright">Copyright © 2016 Simply Paper. \n         All right reserved.</string>
     <string name="descripcion">Simply Paper is an application that offers simple and minimalist images and illustrations so you can decorate your screen and see that this is beautiful . Simply Paper has multiple categories for you to browse easily between them and you can find fabulous artwork according to your tastes.</string>
     <string name="design">Graphic designer.</string>
     <string name="devabout">About the Developer .</string>
@@ -81,4 +81,26 @@
     <string name="permisoDenegado">Permission Denied \n</string>
     <string name="permisoMsjRechazo">If you reject permission,you can not use this service.\n  Please turn on permissions at [Setting] > [Permission]</string>
     <string name="permisosGuardarMsj">we need permission for read contact and find your location</string>
+    <string name="ajustes">Setting</string>
+    <string name="cambio_de_notificaciones">Notifications Changed</string>
+    <string name="cambio_de_tema">Theme Changed</string>
+    <string name="gcm_send_message">Token retrieved and sent to server!</string>
+    <string name="mensajeDialog_numofcolumn_pref">Set Number of Columns</string>
+    <string name="mensajeDialog_palette_pref">This will change the color of App.</string>
+    <string name="original_checkbox_summary_off">CheckBox Off</string>
+    <string name="original_checkbox_summary_on">CheckBox  On</string>
+    <string name="original_switch_preference_off">Gcm Disabled</string>
+    <string name="original_switch_preference_on">Gcm Activated</string>
+    <string name="permisosEmail"><![CDATA[If you reject permission,you can not use this service.\n  Please turn on permissions at [Setting] > [Permission]]]></string>
+    <string name="permisosNotificaciones"><![CDATA[If you reject permission,you can not use this service.\n  Please turn on permissions at [Setting] > [Permission]]]></string>
+    <string name="sumary_numofcolumn_pref">Change the Number of Image per Column</string>
+    <string name="sumary_palette_pref">Change the Color of the App</string>
+    <string name="titleDialog_numofcolumn_pref">Set the Number of Columns</string>
+    <string name="title_numofcolumn_pref">Number of Columns</string>
+    <string name="titulo1_pref">Settings</string>
+    <string name="title_switch_activarGcm">Notifications</string>
+    <string name="tituloDialog_palette_pref">Choose Color</string>
+    <string name="titulo_palette_pref">Change the Theme</string>
+    <string name="token_error_message">An error occurred InstanceID token, Please try running the sample again.</string>
+    <string name="unidad_numofcolumn_pref">Columns</string>
 </resources>

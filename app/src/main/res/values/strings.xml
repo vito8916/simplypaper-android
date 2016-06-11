@@ -19,7 +19,8 @@
     <string name="setting">Ajustes</string>
     <string name="about">Acerca de</string>
     <string name="gplus">Comunidad G+</string>
-    <string name="ayuda">Ayuda</string>
+    <string name="ayuda">Ajustes</string>
+    <string name="ajustes">Ajustes</string>
     <string name="legal">Información legal</string>
 
     <string name="comparte_spapr">Compatir Spaper </string>
@@ -50,8 +51,8 @@
 
     <!-- Acerca de -->
     <string name="slogan">Imagenes simples, pantallas perfectas.</string>
-    <string name="appversion"> Versión: 1.4</string>
-    <string name="copyright">Copyright © 2015 Simply Paper. \n
+    <string name="appversion">Versión: 2.0</string>
+    <string name="copyright">Copyright © 2016 Simply Paper. \n
         All right reserved. </string>
     <string name="descripcion">Simply Paper es una aplicación que te ofrece imagenes e ilustraciones
         simples y minimalistas para que puedas decorar tu pantalla y que esta se vea hermosa. Simply Paper
@@ -136,5 +137,81 @@
     <string name="permisoDenegado">Permisos Denegados \n</string>
     <string name="permisoMsjRechazo">Sí rechazas los permisos,no podrás usar algunos servicios. \n Por favor activa los permisos en [Ajustes] > [Permisos]</string>
     <string name="permisosGuardarMsj">Se necesitan Permisos para Descargar las imágenes.</string>
+    <string name="permisosEmail">Se necesitan Permisos para acceder a la cuenta de correo.</string>
+    <string name="permisosNotificaciones">Se necesitan Permisos para Enviar Notificaciones.</string>
+
+
+    <!-- GCM -->
+    <string name="gcm_send_message">Token retrieved and sent to server!</string>
+    <string name="registering_message" translatable="false">Generating InstanceID token</string>
+    <string name="token_error_message">An error occurred InstanceID token, Please try running the sample again.</string>
+    <string name="title_activity_full_screen2" translatable="false">FullScreenActivity2</string>
+
+    <!-- PREFERENCIAS -->
+
+    <!-- Avisos y mas -->
+    <string name="cambio_de_tema">El Tema Se Cambió Correctamente</string>
+    <string name="cambio_de_notificaciones">Se Ha cambiado la Configuracion de las Notificaciones</string>
+
+    <string name="titulo1_pref">Ajustes</string>
+
+    <!-- STRING PARA EL SWITCH DE LAS NOTIFICACIONES -->
+    <string name="key_switch_activarGcm" translatable="false">material_switchbox_key</string>
+    <string name="title_switch_activarGcm">Notificaciones</string>
+    <string name="original_switch_preference_on">Gcm Activadas</string>
+    <string name="original_switch_preference_off">Gcm Desactivadas</string>
+
+    <!-- STRING PARA EL checkbox -->
+    <string name="key_ckeckbox_pref" translatable="false">material_checkbox_key</string>
+    <string name="key_select_clomunas" translatable="false">material_select_key</string>
+    <string name="original_checkbox_summary_on">CheckBox  On</string>
+    <string name="original_checkbox_summary_off">CheckBox Off</string>
+
+
+    <!-- STRING PARA EL ListPreference DE EL NUMERO DE COLUMNAs -->
+    <string name="key_nunofcolumn_pref" translatable="false">num_ofcolumn_key</string>
+    <string name="title_numofcolumn_pref">Numero de Columnas</string>
+    <string name="unidad_numofcolumn_pref">Columnas</string>
+    <string name="mensajeDialog_numofcolumn_pref">Elige el numero de Columnas en que se mostrarán las imagenes.</string>
+    <string name="titleDialog_numofcolumn_pref">Elige el numero de Columnas.</string>
+    <string name="sumary_numofcolumn_pref">Cambia el numero de columnas de las imagenes.</string>
+    <string-array name="num_of_column" translatable="false">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_syncConnectionTypes_values" translatable="false">
+        <item>uno</item>
+        <item>dos</item>
+        <item>tres</item>
+    </string-array>
+
+
+    <!-- STRING PARA EL COLOR PALETTE -->
+    <string name="key_palette_pref" translatable="false">color_key</string>
+    <string name="sumary_palette_pref">Cambia El Color de la App</string>
+    <string name="titulo_palette_pref">Cambiar Tema</string>
+    <string name="tituloDialog_palette_pref">Escoge Un Color</string>
+    <string name="mensajeDialog_palette_pref">Esto cambiará el color de la App</string>
+
+    <!-- COLORES DE NUEVOS TEMAS -->
+    <string-array name="colorstheme" translatable="false">
+        <item>@color/colorPrimary</item>
+        <item>@color/primaryColor2</item>
+        <item>@color/primaryColor3</item>
+        <item>@color/primaryColor4</item>
+        <item>@color/primaryColor5</item>
+        <item>@color/primaryColor6</item>
+    </string-array>
+    <color name="color1">@color/colorPrimary</color>
+
+
+
+
+
+
+
+
 
 </resources>
