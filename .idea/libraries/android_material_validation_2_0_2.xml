@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-material-validation-2.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/974d3151253320316bad5e0edfab2029f6517deb/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/974d3151253320316bad5e0edfab2029f6517deb/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-material-validation/2.0.2/f72273ea3bb7cbc1cc8f89b48dfc253ed2a9db6b/android-material-validation-2.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

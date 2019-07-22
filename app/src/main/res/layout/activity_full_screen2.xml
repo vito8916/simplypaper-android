@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.dev.victor.spaper.FullScreenActivity2">
+
+
+
+    <include layout="@layout/content_full_screen2" />
+
+
+    <!--  FLOATING SHHET BUTTON / BOTON FLOTANTE CON ESTILO SHEET   -->
+    <com.dev.victor.spaper.util.Fab
+        android:id="@+id/fab2_2"
+        style="@style/FabMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@mipmap/ic_more_vert_white_24dp"
+        app:backgroundTint="@color/colorAccent"
+        app:borderWidth="0dp"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/overlay_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"/>
+
+    <!-- Circular reveal container for the sheet -->
+    <io.codetail.widget.RevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end|bottom"
+        android:orientation="vertical">
+
+        <!-- Sheet that contains your items -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/fab_sheet_2"
+            android:visibility="gone"
+            style="@style/Widget.MaterialSheetFab.Sheet">
+
+            <!-- Sheet items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- Recording -->
+                <com.balysv.materialripple.MaterialRippleLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+                    <TextView
+                        android:id="@+id/fab_sheet_item_wallpaper_2"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@mipmap/ic_now_wallpaper_grey600_24dp"
+                        android:drawableStart="@mipmap/ic_now_wallpaper_grey600_24dp"
+                        android:text="@string/wallpaper" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <!-- Reminder -->
+                <TextView
+                    android:id="@+id/fab_sheet_item_establecer_2"
+                    style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                    android:drawableLeft="@drawable/ic_share_variant_grey600_24dp"
+                    android:drawableStart="@drawable/ic_share_variant_grey600_24dp"
+                    android:text="@string/share" />
+
+
+                <!-- Photo -->
+                <com.balysv.materialripple.MaterialRippleLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true">
+                    <TextView
+                        android:id="@+id/fab_sheet_item_download_2"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@mipmap/ic_cloud_download_grey600_24dp"
+                        android:drawableStart="@mipmap/ic_cloud_download_grey600_24dp"
+                        android:text="@string/download" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <!-- Note -->
+                <LinearLayout
+                    android:id="@+id/fila_fab_expand_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent">
+
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_back_2"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:textColor="@color/text_white_87"
+                        android:drawableLeft="@mipmap/ic_arrow_back_grey600_24dp"
+                        android:drawableStart="@mipmap/ic_arrow_back_grey600_24dp"
+                        android:text="@string/back" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </io.codetail.widget.RevealLinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

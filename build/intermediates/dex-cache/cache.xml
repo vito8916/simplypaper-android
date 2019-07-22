@@ -1,3 +1,752 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\0cf4b4c24f6482f45f4a1d734e6305f02ff1e757\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="74ca46e7da11e3d065eb64cdbe6568a7ed74c211">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_8588783f35c96f5e307bf17b44a1639bd19a93f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\df2d17ed372a580b470ef511e393f61d3629069e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75c54c470e19b251749e6e6c2cf3d73c0b50aa64">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_616d76d7b777eaf1eb951d365f9158927b58bbb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\7872a15e96913482f670b11c03021bf69e685197\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_dfa9f916fdd919fabf499faef7772ea4874e6949.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_8f515cd572f5e60e59c81a8fd05264b4ba75f68d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AppData\Local\Android\sdk1\build-tools\25.0.2\renderscript\lib\renderscript-v8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05668b8cd6c7b07f152b6a5b4c6cff620817ba0f">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\renderscript-v8_54125b0db1b08818a12d4f535518dc48d4231df3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\library-2.4.0_3d7583eda87ece4c0552ccc4ead78187e0cab54e.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_62497613103d23de43093bcaa6a221de17fd9d4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\otto-1.3.7_390d4903ffa7f4e671851c1ba21e73f5c9d6aa8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5c896713ca784a73caa359f151b201717ec5cc94\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_1eb7e8feeb0aa4ab34398d356099be39c07c6be0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5de536b5550069c76b82849127d4c4a0171f909e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb58484b10248cbf93dddee3d981d2e61f27f6e5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_fcc97bb43614cb21bf6d402fcd6458623d094d0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d9ce37d8e820139eb7957adb80cdb5496c4bc032\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_368cf7108a151535f4e2049f6c2c1d2e253fe021.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.0.1\345b89f45d02d8b09400b472fab7b7e38f4ede1f\butterknife-annotations-8.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="345b89f45d02d8b09400b472fab7b7e38f4ede1f">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\butterknife-annotations-8.0.1_2796497d63150066b6c316b666484fea817bcbf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\a3c8590ca74fb669bc02c06860ceebe9f46aa160\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c733e9d1b065d940a08f2fca0ff920dfc08d94cc">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_81843b7cd50fded010b04f976c8a444f5605ef77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\picasso-2.5.2_e209f9d1ef3619f4c3e3414c8e51c27592758ae6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\YouTubeAndroidPlayerApi_b3eee5262db40712f98ca8c2e5bad76b9b4aa982.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\718b8b53da02adcfab2cf59ef3b594455a2118c0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_aea4f87fb4271e961c8683c096c5cc432d489358.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\281debde90eda7f25d2b44ce80c5d34b2b032f45\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_3886a86d2fdfb92136c67a931078fc166b7ca254.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\ed3c553da5ffd9a13241ac1efae0149cb06ee327\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="528f38233a6f9926573918cc238c06c8c7890ad5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_d662f9e1d420d3b886f9f7e68004de44e6748920.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\2badac999fdba33b32ef4df822721d6a6c9e2ad1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_6c4f55d0d070ddb27ec391c9ff0767b563d402d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d9ce37d8e820139eb7957adb80cdb5496c4bc032\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_ee4f3cb993c424ed924fb5885964b643539d34b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\Volley\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="79321cfa553f9fd6c483a5202ea75ae99da10cc5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_da6a40cf12532ddb25fd86124a2cac4d47e05263.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\a3c8590ca74fb669bc02c06860ceebe9f46aa160\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c733e9d1b065d940a08f2fca0ff920dfc08d94cc">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_81843b7cd50fded010b04f976c8a444f5605ef77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\support-annotations-23.4.0_8f515cd572f5e60e59c81a8fd05264b4ba75f68d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\1ea4ad892838aee5f5f87a87af69d4005ec3401f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_38f184981af4663f14cc9999c5ee750fc379df52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\3264ff8bcf3b1cb766cfcf3906cc6d8225a994da\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="31dbe885ef6a9d6a88412750e85784f60b95cb90">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_aebfed850724c1166cc56857874135fab0f63a70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_e209f9d1ef3619f4c3e3414c8e51c27592758ae6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\ad5123e30831f10f5b0e4317dfea823fb402f463\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0443ca0163c9730cb028934b1a96b021198fe74a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_021b552f4a59693bce2c8c5824dda854810b0e23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d1cb51ebb5b5a5924410026767135d2275198c4c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e325e9ba5c23d635d0cfaa76c349fca83101f8a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_e867b837f4ba920226e1f4113c73959747541222.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\a2d00d94a0674bc9e36b463b651540f637dc76f7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_1d52f55fa9a7f003890320cc115dbb1c332392b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d9ce37d8e820139eb7957adb80cdb5496c4bc032\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\internal_impl-23.4.0_ee4f3cb993c424ed924fb5885964b643539d34b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\ed3c553da5ffd9a13241ac1efae0149cb06ee327\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="528f38233a6f9926573918cc238c06c8c7890ad5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_d662f9e1d420d3b886f9f7e68004de44e6748920.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.0.1\345b89f45d02d8b09400b472fab7b7e38f4ede1f\butterknife-annotations-8.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="345b89f45d02d8b09400b472fab7b7e38f4ede1f">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\butterknife-annotations-8.0.1_2796497d63150066b6c316b666484fea817bcbf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5240d9a98d20d4237982d57df9b31e624a668776\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2518be6770f8ec0565eeed90628bdef020ecc407">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_8f94f011a4cade203915a543fda9d9488df0a9bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\picasso-2.5.2_e209f9d1ef3619f4c3e3414c8e51c27592758ae6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\3691bcf35f3b4760d209d4d60575aac2b0c78647\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b0003f18f1d5f824431194ea22b1af4522246905">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_fef07b60cf1bd54d653060d909c50b14a331573f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\779d1ee5706530b81313678ff1c003a9d08d7e92\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_7df6a9cd6a0c43fe42b1c320b72ec0769ee5ec18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\efee5c29d9cb9359482027b15c46992689382b95\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_ac73dbd4d417a351317ef73e19b7375464840c35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\30fb4e4272a3fc51e511385c6c6c59e8fd01236f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d241e5c81afb325b19987825668ff3e86b81ff5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_148452f190abee0e8043c188784244a1bda9708b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\97ad745f2364f9837b7986c31ef093841372dbeb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="163a9f0fdaa1ca9dd988554c2e1774da812847dd">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_2e767ccb2992aed4cfcc3631bc33134a7c7d0383.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\8447d2f95530a539b27a2701b4274510ea75a305\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_c4a6cdb004191a762ab4e6ebf7d1691c2a35a170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\cca654d8d12dec0e07337614e8c731f0a847fdf1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="149d269764e1ad8d24e18e8cb71cd6b95062f3d1">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_c0a3b03337187b487da984bac193294402ddf353.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\293a3c2eab169c947e1208035683d07d84c8613f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0492f89ef6b9760e6db56a8a644c35fcf419854d">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_8357238af4ac051ed2896a1eec516af5fe887b13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\0894f369adc27af7ed87ef405b3040bf0d4aaeda\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_3e51cd3a113bfee943f34e8165eab0a09e16ac79.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\otto-1.3.7_390d4903ffa7f4e671851c1ba21e73f5c9d6aa8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5de536b5550069c76b82849127d4c4a0171f909e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bb58484b10248cbf93dddee3d981d2e61f27f6e5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_fcc97bb43614cb21bf6d402fcd6458623d094d0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\7872a15e96913482f670b11c03021bf69e685197\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_dfa9f916fdd919fabf499faef7772ea4874e6949.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\974d3151253320316bad5e0edfab2029f6517deb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3563a7d79110b125f4301d56cade6b06b4094880">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_ab63ce13f46927569772dcdcaf9a80dd7a9d3d4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_8f515cd572f5e60e59c81a8fd05264b4ba75f68d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\0cf4b4c24f6482f45f4a1d734e6305f02ff1e757\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74ca46e7da11e3d065eb64cdbe6568a7ed74c211">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_8588783f35c96f5e307bf17b44a1639bd19a93f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\cbbb0d65a294a14034486a269eab2072248015a1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_fd750a6bbe233c372250d63e5fa9739273e79141.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.0.1\345b89f45d02d8b09400b472fab7b7e38f4ede1f\butterknife-annotations-8.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="345b89f45d02d8b09400b472fab7b7e38f4ede1f">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.0.1_2796497d63150066b6c316b666484fea817bcbf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\2badac999fdba33b32ef4df822721d6a6c9e2ad1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_6c4f55d0d070ddb27ec391c9ff0767b563d402d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\Volley\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="79321cfa553f9fd6c483a5202ea75ae99da10cc5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_da6a40cf12532ddb25fd86124a2cac4d47e05263.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\281debde90eda7f25d2b44ce80c5d34b2b032f45\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_3886a86d2fdfb92136c67a931078fc166b7ca254.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_b3eee5262db40712f98ca8c2e5bad76b9b4aa982\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\f35dfc3628b2ceccd73aacdd13b864dc3ae9ced6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="68c86922cbd6debee21eb3639469d2ec5a378195">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_ed43a9e032fa75f445355f17acba12b46d0eadc1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\df2d17ed372a580b470ef511e393f61d3629069e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75c54c470e19b251749e6e6c2cf3d73c0b50aa64">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_616d76d7b777eaf1eb951d365f9158927b58bbb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d9ce37d8e820139eb7957adb80cdb5496c4bc032\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_368cf7108a151535f4e2049f6c2c1d2e253fe021.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="42ba9b4b037ad20fea41b8c1a67b7582d48b9e65">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a5c21c08c99289bad82aa8d6c15f11eaa8635ee9\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\d1cb51ebb5b5a5924410026767135d2275198c4c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e325e9ba5c23d635d0cfaa76c349fca83101f8a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_e867b837f4ba920226e1f4113c73959747541222.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\293a3c2eab169c947e1208035683d07d84c8613f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0492f89ef6b9760e6db56a8a644c35fcf419854d">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_8357238af4ac051ed2896a1eec516af5fe887b13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\a2d00d94a0674bc9e36b463b651540f637dc76f7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_1d52f55fa9a7f003890320cc115dbb1c332392b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\otto-1.3.7_390d4903ffa7f4e671851c1ba21e73f5c9d6aa8b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\779d1ee5706530b81313678ff1c003a9d08d7e92\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_7df6a9cd6a0c43fe42b1c320b72ec0769ee5ec18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\718b8b53da02adcfab2cf59ef3b594455a2118c0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_aea4f87fb4271e961c8683c096c5cc432d489358.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\cca654d8d12dec0e07337614e8c731f0a847fdf1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="149d269764e1ad8d24e18e8cb71cd6b95062f3d1">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_c0a3b03337187b487da984bac193294402ddf353.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\library-2.4.0_3d7583eda87ece4c0552ccc4ead78187e0cab54e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\ad5123e30831f10f5b0e4317dfea823fb402f463\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0443ca0163c9730cb028934b1a96b021198fe74a">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_021b552f4a59693bce2c8c5824dda854810b0e23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\0894f369adc27af7ed87ef405b3040bf0d4aaeda\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_3e51cd3a113bfee943f34e8165eab0a09e16ac79.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\f35dfc3628b2ceccd73aacdd13b864dc3ae9ced6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="68c86922cbd6debee21eb3639469d2ec5a378195">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_ed43a9e032fa75f445355f17acba12b46d0eadc1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\1ea4ad892838aee5f5f87a87af69d4005ec3401f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_38f184981af4663f14cc9999c5ee750fc379df52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\8447d2f95530a539b27a2701b4274510ea75a305\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_c4a6cdb004191a762ab4e6ebf7d1691c2a35a170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\3264ff8bcf3b1cb766cfcf3906cc6d8225a994da\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="31dbe885ef6a9d6a88412750e85784f60b95cb90">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_aebfed850724c1166cc56857874135fab0f63a70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\YouTubeAndroidPlayerApi_b3eee5262db40712f98ca8c2e5bad76b9b4aa982.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\97ad745f2364f9837b7986c31ef093841372dbeb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="163a9f0fdaa1ca9dd988554c2e1774da812847dd">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_2e767ccb2992aed4cfcc3631bc33134a7c7d0383.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\3691bcf35f3b4760d209d4d60575aac2b0c78647\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b0003f18f1d5f824431194ea22b1af4522246905">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_fef07b60cf1bd54d653060d909c50b14a331573f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\efee5c29d9cb9359482027b15c46992689382b95\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_ac73dbd4d417a351317ef73e19b7375464840c35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\YouTubeAndroidPlayerApi_b3eee5262db40712f98ca8c2e5bad76b9b4aa982.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\974d3151253320316bad5e0edfab2029f6517deb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3563a7d79110b125f4301d56cade6b06b4094880">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_ab63ce13f46927569772dcdcaf9a80dd7a9d3d4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\30fb4e4272a3fc51e511385c6c6c59e8fd01236f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6d241e5c81afb325b19987825668ff3e86b81ff5">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_148452f190abee0e8043c188784244a1bda9708b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5240d9a98d20d4237982d57df9b31e624a668776\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2518be6770f8ec0565eeed90628bdef020ecc407">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_8f94f011a4cade203915a543fda9d9488df0a9bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\5c896713ca784a73caa359f151b201717ec5cc94\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_1eb7e8feeb0aa4ab34398d356099be39c07c6be0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\vic_a\.android\build-cache\cbbb0d65a294a14034486a269eab2072248015a1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_fd750a6bbe233c372250d63e5fa9739273e79141.jar" />
+    </item>
+
+</items>

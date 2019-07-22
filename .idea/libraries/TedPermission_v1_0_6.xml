@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="TedPermission-v1.0.6">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.6/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.6/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/97ad745f2364f9837b7986c31ef093841372dbeb/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/97ad745f2364f9837b7986c31ef093841372dbeb/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

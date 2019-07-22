@@ -34,9 +34,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter;
+import jp.wasabeef.recyclerview.adapters.SlideInBottomAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
-import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
-import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
+
 
 public class ActividadDetalleCategoria extends AppCompatActivity {
     private static Context context;
@@ -106,7 +107,7 @@ public class ActividadDetalleCategoria extends AppCompatActivity {
                         item.setFarm(fotos.getJSONObject(i).getString("farm"));
                         item.setServer(fotos.getJSONObject(i).getString("server"));
 
-                        item.setUlrAlbumPhotolist("http://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
+                        item.setUlrAlbumPhotolist("https://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
 
                         feedsList.add(item);
                     }

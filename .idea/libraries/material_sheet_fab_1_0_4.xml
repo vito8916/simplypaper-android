@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="material-sheet-fab-1.0.4">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.gordonwong/material-sheet-fab/1.0.4/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.gordonwong/material-sheet-fab/1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/30fb4e4272a3fc51e511385c6c6c59e8fd01236f/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/30fb4e4272a3fc51e511385c6c6c59e8fd01236f/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

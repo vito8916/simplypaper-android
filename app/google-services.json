@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "548917591435",
+    "project_id": "spaper-f2751"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548917591435:android:c560846122e18130",
+        "android_client_info": {
+          "package_name": "com.dev.victor.spaper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXOlwfKCdl7MUWVDbciav6FGdumjIbsHA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

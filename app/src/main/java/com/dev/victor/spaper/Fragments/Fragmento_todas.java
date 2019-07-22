@@ -54,9 +54,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.dmoral.prefs.Prefs;
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter;
+import jp.wasabeef.recyclerview.adapters.SlideInBottomAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
-import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
-import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -129,7 +130,8 @@ public class Fragmento_todas extends Fragment {
         final View view = inflater.inflate(R.layout.fragmento_todas, container, false);
         context = view.getContext();
 
-        urlGaleria = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=3a486f912da87a2011d3f5a03e01be7c&user_id=134427773%40N06&extras=original_format&format=json&nojsoncallback=1";
+        urlGaleria = "https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=3a486f912da87a2011d3f5a03e01be7c&user_id=134427773%40N06&extras=original_format&format=json&nojsoncallback=1c";
+
        // refreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.refresh);
             mSwipyRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipyrefreshlayout) ;
         btnRetry = (Button)view.findViewById(R.id.btnRtry);
@@ -270,7 +272,9 @@ public class Fragmento_todas extends Fragment {
                         FeedItemTodas item = new FeedItemTodas();
                         item.setIdPhoto(fotos.getJSONObject(i).getString("id"));
                         item.setTitle(fotos.getJSONObject(i).getString("title"));
-                        item.setUrlimg("http://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
+                        //item.setUrlimg("http://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
+
+                        item.setUrlimg("https://farm" + fotos.getJSONObject(i).getString("farm") + ".staticflickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
 
                         feedsList.add(item);
 

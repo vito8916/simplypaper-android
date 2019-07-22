@@ -42,10 +42,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.dmoral.prefs.Prefs;
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter;
+import jp.wasabeef.recyclerview.adapters.SlideInBottomAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.ScaleInAnimator;
-import jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter;
-import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
-import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
+
 
 public class Fragmento_nuevas extends Fragment {
 
@@ -122,7 +122,7 @@ public class Fragmento_nuevas extends Fragment {
                         FeedItemNuevas item = new FeedItemNuevas();
                         item.setIdPhoto(fotos.getJSONObject(i).getString("id"));
                         item.setTitle(fotos.getJSONObject(i).getString("title"));
-                        item.setUrlimg("http://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
+                        item.setUrlimg("https://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
 
                         feedsList.add(item);
                     }

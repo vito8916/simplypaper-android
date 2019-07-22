@@ -175,10 +175,10 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
             try {
                 nombreIMG = datos.getString("title");
                 formatoIMG = datos.getString("originalformat");
-                urlImagenBig = "http://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_b."+datos.getString("originalformat")+"";
-                urlImagenSmall = "http://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_s."+datos.getString("originalformat")+"";
+                urlImagenBig = "https://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_b."+datos.getString("originalformat")+"";
+                urlImagenSmall = "https://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_s."+datos.getString("originalformat")+"";
                 urlImgenOriginal = "https://farm"+datos.getString("farm")+".staticflickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("originalsecret")+"_o."+datos.getString("originalformat")+"";
-                urlImagenHight = "http://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_h."+datos.getString("originalformat")+"";
+                urlImagenHight = "https://farm"+datos.getString("farm")+".static.flickr.com/"+datos.getString("server")+"/"+datos.getString("id")+"_"+datos.getString("secret")+"_h."+datos.getString("originalformat")+"";
             } catch (JSONException e) {
                 e.printStackTrace();
             }

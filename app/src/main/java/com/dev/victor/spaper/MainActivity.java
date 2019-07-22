@@ -11,6 +11,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     //  Launch app intro
                     Intent i = new Intent(MainActivity.this, Intro.class);
                     startActivity(i);
-
+                    finish();
                     //  Make a new preferences editor
                     SharedPreferences.Editor e = getPrefs.edit();
 
@@ -143,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         //txtRegid = (TextView)findViewById(R.id.textView);
-        Correo = getAccount(AccountManager.get(getApplicationContext()));
+        Correo = getAccount();
 
 
         if (checkPlayServices()) {
@@ -180,8 +183,8 @@ public class MainActivity extends AppCompatActivity {
                 .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.WAKE_LOCK,
                         Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.ACCOUNT_MANAGER,
-                        Manifest.permission.GET_ACCOUNTS,
+                        /*Manifest.permission.ACCOUNT_MANAGER,
+                        Manifest.permission.GET_ACCOUNTS,*/
                         Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE)
                 .check();
 
@@ -189,12 +192,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void configNavigationBar() {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        //configurarColorIconos();
         if (navigationView != null) {
             prepararDrawer(navigationView);
             // Seleccionar item por defecto
             seleccionarItem(navigationView.getMenu().getItem(0));
         }
     }
+
+  /*  private void configurarColorIconos() {
+        Drawable iconsetting, iconHome, iconInfo, iconDownload, iconCopyr;
+        iconsetting = ContextCompat.getDrawable(this, R.drawable.zzz_settings);
+        iconHome = ContextCompat.getDrawable(this, R.drawable.zzz_home);
+        iconInfo = ContextCompat.getDrawable(this, R.drawable.zzz_information);
+        iconCopyr = ContextCompat.getDrawable(this, R.drawable.zzz_copyright);
+        iconDownload = ContextCompat.getDrawable(this, R.drawable.zzz_folder_download);
+
+        iconsetting.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+        iconHome.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+        iconInfo.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+        iconCopyr.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+        iconDownload.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+    }*/
+
 
     private void prepararDrawer(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
@@ -300,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(id == R.id.webpage){
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://simplypaper.ml")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://simplypaper.ml")));
 
         }
 
@@ -379,22 +399,23 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Metodo para obtener el correo principal del usuario.
-    private String getAccount(AccountManager accountManager) {
+//    private String getAccount(AccountManager accountManager) {
+    private String getAccount() {
 
-        Account[] accounts = accountManager.getAccounts();
-        Account account;
+        /*Account[] accounts = accountManager.getAccounts();
+        Account account;*/
         //String emailId;
         String emailComplete;
-        if (accounts.length > 0) {
+        emailComplete = "simplypaperwallpaper@gmail.com";
+        /*if (accounts.length > 0) {
             account = accounts[0];
             emailComplete = account.name;
-            Toast.makeText(context,emailComplete,Toast.LENGTH_LONG).show();
-            //emailId = emailComplete.substring(0,emailComplete.lastIndexOf("@"));
+
         } else {
            //// emailId = "ejemplo@gmail.com";
-            emailComplete = "ejemplo@gmail.com";
-            Toast.makeText(context,emailComplete,Toast.LENGTH_LONG).show();
-        }
+            emailComplete = "simplypaperwallpaper@gmail.com";
+            //Toast.makeText(context,emailComplete,Toast.LENGTH_LONG).show();
+        }*/
         return emailComplete;
     }
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-material-dialog-3.5.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/5240d9a98d20d4237982d57df9b31e624a668776/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/5240d9a98d20d4237982d57df9b31e624a668776/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-material-dialog/3.5.0/2a6795354abf4fd4c0328efc671165c2dd142935/android-material-dialog-3.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

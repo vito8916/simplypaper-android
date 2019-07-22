@@ -7,8 +7,11 @@ import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
@@ -16,10 +19,12 @@ import android.os.Bundle;
 
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -43,7 +48,11 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -68,7 +77,7 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
     String img;
     DisplayMetrics metrics;
     private ProgressDialog mProgress;
-    Bitmap bitmap20;
+    Bitmap bitmap20, decoded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,10 +118,18 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
         if (img != null) {
             imageFile = new File(img);
         }
-
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.RGB_565;
-        bitmap20 = BitmapFactory.decodeFile(img,options);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+        try {
+            bitmap20 = BitmapFactory.decodeStream(new FileInputStream(img),null,options);
+            bitmap20.compress(Bitmap.CompressFormat.JPEG, 90 , baos);
+            decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(baos.toByteArray()));
+        }catch (FileNotFoundException e){
+           e.printStackTrace();
+        }
+
 
 
         Picasso.with(getApplicationContext())
@@ -237,6 +254,7 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
     //METODO PARA CONFIGURAR EL FLOATING BUTTON
     private void setupFab(){
         ColorPalette colorPalette = new ColorPalette();
+       // configurarIconColor();
 
 
 
@@ -284,6 +302,20 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
 
     }
 
+   /* private void configurarIconColor() {
+
+            Drawable iconImage, iconArrowLeft, iconDownload, iconShare;
+            iconImage = ContextCompat.getDrawable(this, R.drawable.zzz_tooltip_image);
+            iconArrowLeft = ContextCompat.getDrawable(this, R.drawable.zzz_arrow_left);
+            iconDownload = ContextCompat.getDrawable(this, R.drawable.zzz_image_mutliple);
+            iconShare = ContextCompat.getDrawable(this, R.drawable.zzz_share_variant);
+
+            iconImage.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+            iconArrowLeft.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+            iconDownload.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+            iconShare.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP);
+
+    }*/
 
 
     @Override
@@ -292,7 +324,7 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
 
         switch (id) {
             case R.id.fab_sheet_item_wallpaper3:
-                wallpaper(bitmap20);
+                wallpaper(decoded);
 
                 //showProgressAsWallpaper();
                 materialSheetFab.hideSheet();
@@ -330,10 +362,10 @@ public class FullscreenDescargas extends AppCompatActivity implements View.OnCli
 
         try {
 
-                //Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
+                Bitmap bitmapResized = Bitmap.createScaledBitmap(bitmap, width, height, true);
                 wpManager.setWallpaperOffsetSteps(1, 1);
                 wpManager.suggestDesiredDimensions(width, height);
-                wpManager.setBitmap(bitmap);
+                wpManager.setBitmap(bitmapResized);
 
 
 

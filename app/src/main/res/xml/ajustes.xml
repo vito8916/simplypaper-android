@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="@string/titulo1_pref">
+        <de.mrapp.android.preference.SwitchPreference
+            android:key="@string/key_switch_activarGcm"
+            android:summaryOn="@string/original_switch_preference_on"
+            android:summaryOff="@string/original_switch_preference_off"
+            android:title="@string/title_switch_activarGcm"
+            android:defaultValue="true"
+            />
+
+        <de.mrapp.android.preference.NumberPickerPreference
+            android:defaultValue="2"
+            custom:min="1"
+            android:max="3"
+            custom:useInputMethod="false"
+            custom:wrapSelectorWheel="false"
+            android:summary="@string/sumary_numofcolumn_pref"
+            android:dialogMessage="@string/mensajeDialog_numofcolumn_pref"
+            android:dialogTitle="@string/titleDialog_numofcolumn_pref"
+            android:key="@string/key_nunofcolumn_pref"
+            android:title="@string/title_numofcolumn_pref"
+            custom:unit="@string/unidad_numofcolumn_pref"
+            custom:stepSize="1"
+            custom:showValueAsSummary="false"
+            />
+
+        <de.mrapp.android.preference.ColorPalettePreference
+            android:defaultValue="@color/colorPrimary"
+            custom:showPreview="true"
+            custom:previewSize="20dp"
+            custom:colorPalette="@array/colorstheme"
+            android:dialogMessage="@string/mensajeDialog_palette_pref"
+            android:dialogTitle="@string/tituloDialog_palette_pref"
+            android:key="@string/key_palette_pref"
+
+            android:summary="@string/sumary_palette_pref"
+            android:title="@string/titulo_palette_pref"
+            custom:showValueAsSummary="false"
+            />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>
