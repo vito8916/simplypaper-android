@@ -153,6 +153,7 @@ public class FullScreenActivity2 extends AppCompatActivity implements View.OnCli
 
         try {
             datos = new JSONObject(jsostring);
+            Log.d("OBJETO", "" + datos);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -161,36 +162,29 @@ public class FullScreenActivity2 extends AppCompatActivity implements View.OnCli
             try {
                 nombreIMG = datos.getString("title");
                 formatoIMG = datos.getString("originalformat");
-                urlImagenBig = "https://farm" + datos.getString("farm")
-                        + ".static.flickr.com/"
+                urlImagenBig = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
-                        + "_" + datos.getString("secret") + "_b."
+                        + "_" + datos.getString("secret") + "_h."
                         + datos.getString("originalformat")
                         + "";
-                urlImagenSmall = "https://farm"
-                        + datos.getString("farm")
-                        + ".static.flickr.com/"
+                urlImagenSmall = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
                         + "_" + datos.getString("secret")
-                        + "_s." + datos.getString("originalformat")
+                        + "_b." + datos.getString("originalformat")
                         + "";
-                urlImgenOriginal = "https://farm"
-                        + datos.getString("farm")
-                        + ".staticflickr.com/"
+                urlImgenOriginal = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
                         + "_" + datos.getString("originalsecret")
                         + "_o." + datos.getString("originalformat")
                         + "";
-                urlImagenHight = "https://farm"
-                        + datos.getString("farm")
-                        + ".static.flickr.com/"
+                urlImagenHight = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
                         + "_" + datos.getString("secret")
-                        + "." + datos.getString("originalformat")
+                        + "_h." + datos.getString("originalformat")
                         + "";
             } catch (JSONException e) {
                 e.printStackTrace();

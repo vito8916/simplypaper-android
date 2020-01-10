@@ -320,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(id == R.id.webpage){
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://simplypaper.ml")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://simplypaper.vicxbox.com")));
 
         }
 

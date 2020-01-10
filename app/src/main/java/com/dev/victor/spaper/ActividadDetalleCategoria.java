@@ -107,7 +107,7 @@ public class ActividadDetalleCategoria extends AppCompatActivity {
                         item.setFarm(fotos.getJSONObject(i).getString("farm"));
                         item.setServer(fotos.getJSONObject(i).getString("server"));
 
-                        item.setUlrAlbumPhotolist("https://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_c.jpg");
+                        item.setUlrAlbumPhotolist("https://farm" + fotos.getJSONObject(i).getString("farm") + ".static.flickr.com/" + fotos.getJSONObject(i).get("server") + "/" + fotos.getJSONObject(i).getString("id") + "_" + fotos.getJSONObject(i).getString("secret") + "_b.jpg");
 
                         feedsList.add(item);
                     }

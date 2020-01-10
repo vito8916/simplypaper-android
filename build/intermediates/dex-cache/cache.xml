@@ -56,15 +56,6 @@
         <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\library-2.4.0_3d7583eda87ece4c0552ccc4ead78187e0cab54e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_62497613103d23de43093bcaa6a221de17fd9d4f\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="C:\Users\vic_a\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
         jumboMode="false"
@@ -488,15 +479,6 @@
         <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\release\classes_3886a86d2fdfb92136c67a931078fc166b7ca254.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
-        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\2\YouTubeAndroidPlayerApi_b3eee5262db40712f98ca8c2e5bad76b9b4aa982\classes.dex" />
-    </item>
-    <item
         is-multidex="false"
         jar="C:\Users\vic_a\.android\build-cache\f35dfc3628b2ceccd73aacdd13b864dc3ae9ced6\output\jars\classes.jar"
         jumboMode="false"
@@ -522,15 +504,6 @@
         revision="25.0.0"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
         <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\pre-dexed\debug\classes_368cf7108a151535f4e2049f6c2c1d2e253fe021.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="42ba9b4b037ad20fea41b8c1a67b7582d48b9e65">
-        <dex dex="C:\Users\vic_a\AndroidStudioProjects\simplypaper-wallpapers\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a5c21c08c99289bad82aa8d6c15f11eaa8635ee9\classes.dex" />
     </item>
     <item
         is-multidex="false"
