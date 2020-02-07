@@ -1,6 +1,5 @@
 package com.dev.victor.spaper;
 
-import android.*;
 import android.app.ActivityManager;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
@@ -9,10 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Point;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -21,13 +17,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.PowerManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
-import android.support.v7.widget.Toolbar;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.palette.graphics.Palette;
+import androidx.appcompat.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -37,7 +33,6 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -165,7 +160,7 @@ public class FullScreenActivity2 extends AppCompatActivity implements View.OnCli
                 urlImagenBig = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
-                        + "_" + datos.getString("secret") + "_h."
+                        + "_" + datos.getString("secret") + "_b."
                         + datos.getString("originalformat")
                         + "";
                 urlImagenSmall = "https://live.staticflickr.com/"
@@ -178,13 +173,13 @@ public class FullScreenActivity2 extends AppCompatActivity implements View.OnCli
                         + datos.getString("server")
                         + "/" + datos.getString("id")
                         + "_" + datos.getString("originalsecret")
-                        + "_o." + datos.getString("originalformat")
+                        + "_b." + datos.getString("originalformat")
                         + "";
                 urlImagenHight = "https://live.staticflickr.com/"
                         + datos.getString("server")
                         + "/" + datos.getString("id")
                         + "_" + datos.getString("secret")
-                        + "_h." + datos.getString("originalformat")
+                        + "_b." + datos.getString("originalformat")
                         + "";
             } catch (JSONException e) {
                 e.printStackTrace();

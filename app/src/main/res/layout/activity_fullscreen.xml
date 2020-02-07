@@ -1,4 +1,4 @@
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:src="@drawable/ic_arrow_forward_white_24px"
         app:backgroundTint="@color/colorAccent"
         app:borderWidth="0dp"
         android:visibility="gone"
@@ -68,7 +68,7 @@
 
         <!-- Sheet that contains your items -->
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/fab_sheet"
             android:visibility="gone"
             style="@style/Widget.MaterialSheetFab.Sheet">
@@ -147,7 +147,7 @@
             </LinearLayout>
 
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
     </io.codetail.widget.RevealLinearLayout>
@@ -156,4 +156,4 @@
          android:fitsSystemWindows. -->
 
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

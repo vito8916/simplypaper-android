@@ -5,7 +5,7 @@
 
     xmlns:wheel="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/reciclador"
     android:layout_width="match_parent"

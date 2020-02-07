@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.michael-rapp:android-util:1.4.11@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8dca3c5245f6e3d4b41f5a6c192a03bd/android-util-1.4.11/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8dca3c5245f6e3d4b41f5a6c192a03bd/android-util-1.4.11/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b0e5290148b511f7910ed5c4b743d8b/jetified-android-util-1.4.11/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b0e5290148b511f7910ed5c4b743d8b/jetified-android-util-1.4.11/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-util/1.4.11/265d50d268d4521bbb5caf1a0816d241c6742255/android-util-1.4.11-javadoc.jar!/" />

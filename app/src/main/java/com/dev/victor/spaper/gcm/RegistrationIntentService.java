@@ -4,7 +4,7 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v4.content.LocalBroadcastManager;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -15,8 +15,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.dev.victor.spaper.MainActivity;
 import com.dev.victor.spaper.R;
 import com.dev.victor.spaper.util.AppController;
-import com.dev.victor.spaper.util.MySingleton;
-import com.dev.victor.spaper.util.VolleySingleton;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
 

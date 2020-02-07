@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.gordonwong:material-sheet-fab:1.0.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e3a5f49dfd8a97c19eb3667a5aad767/material-sheet-fab-1.0.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e3a5f49dfd8a97c19eb3667a5aad767/material-sheet-fab-1.0.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fe612fd9c7cf6058fe149b882b106d9/jetified-material-sheet-fab-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fe612fd9c7cf6058fe149b882b106d9/jetified-material-sheet-fab-1.0.4/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gordonwong/material-sheet-fab/1.0.4/1e01c850fe7549db48ef737acd7759749c353ac5/material-sheet-fab-1.0.4-javadoc.jar!/" />
