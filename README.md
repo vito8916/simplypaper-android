@@ -7,7 +7,7 @@ SimplyPaper es una app que te ofrece los mejores fondos de pantalla para tu smar
 
 ![App Screenshot](https://vicbox.tech/resources/publi_ingles2.png)
 
-##Características:
+## Características:
 
 * Compatibilidad con Android 6.0 Marshmallows.
 * Integración con Notificaciones
@@ -26,13 +26,13 @@ SimplyPaper es una app que te ofrece los mejores fondos de pantalla para tu smar
 * Comunidad en G+ activa.
 * Sección de ayuda y sugerencias.
 
-##Lanzamiento
+## Lanzamiento
 30 dic 2015
 
-##Última Actualización
+## Última Actualización
 29 ene 2020
 
-##Versión
+## Versión
 2.1.4
 
 ## Tech Stack
