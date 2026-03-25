@@ -1,8 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: com.github.michael-rapp:android-material-preferences:2.4.0@aar">
+  <library name="Gradle: com.github.michael-rapp:android-material-preferences:2.4.0@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/72a405e55659b4c1eacc553f4307f30c/jetified-android-material-preferences-2.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/72a405e55659b4c1eacc553f4307f30c/jetified-android-material-preferences-2.4.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/c8e3660f098101678d0526e365a61685/transformed/jetified-android-material-preferences-2.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/c8e3660f098101678d0526e365a61685/transformed/jetified-android-material-preferences-2.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/c8e3660f098101678d0526e365a61685/transformed/jetified-android-material-preferences-2.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-material-preferences/2.4.0/e4ce05acb7706687a9e9ef427ce90d5a26aca5d7/android-material-preferences-2.4.0-javadoc.jar!/" />

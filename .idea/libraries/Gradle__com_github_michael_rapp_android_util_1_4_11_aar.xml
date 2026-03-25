@@ -1,8 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: com.github.michael-rapp:android-util:1.4.11@aar">
+  <library name="Gradle: com.github.michael-rapp:android-util:1.4.11@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b0e5290148b511f7910ed5c4b743d8b/jetified-android-util-1.4.11/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b0e5290148b511f7910ed5c4b743d8b/jetified-android-util-1.4.11/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/9296722ab34291307e1cb21a6227f339/transformed/jetified-android-util-1.4.11/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/9296722ab34291307e1cb21a6227f339/transformed/jetified-android-util-1.4.11/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/9296722ab34291307e1cb21a6227f339/transformed/jetified-android-util-1.4.11/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-util/1.4.11/265d50d268d4521bbb5caf1a0816d241c6742255/android-util-1.4.11-javadoc.jar!/" />

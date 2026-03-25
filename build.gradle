@@ -2,12 +2,13 @@
 
 buildscript {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
-        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.android.tools.build:gradle:8.9.3'
+        classpath 'com.google.gms:google-services:4.4.4'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,11 +18,12 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        jcenter()
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }

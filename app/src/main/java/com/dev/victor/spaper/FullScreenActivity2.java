@@ -46,7 +46,7 @@ import com.dev.victor.spaper.util.VolleySingleton;
 import com.gordonwong.materialsheetfab.MaterialSheetFab;
 import com.gordonwong.materialsheetfab.MaterialSheetFabEventListener;
 import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
+import com.gun0912.tedpermission.normal.TedPermission;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,6 +59,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import jp.wasabeef.blurry.Blurry;
 
@@ -629,12 +630,13 @@ public class FullScreenActivity2 extends AppCompatActivity implements View.OnCli
             }
 
             @Override
-            public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+            public void onPermissionDenied(List<String> deniedPermissions) {
                 Toast.makeText(FullScreenActivity2.this, getString(R.string.permisoDenegado) + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+
             }
 
         };
-        new TedPermission(this)
+        new TedPermission().create()
                 .setPermissionListener(permissionlistener)
                 .setRationaleMessage(getString(R.string.permisosGuardarMsj))
                 .setDeniedMessage(getString(R.string.permisoMsjRechazo))

@@ -1,8 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: com.github.michael-rapp:android-material-validation:2.0.2@aar">
+  <library name="Gradle: com.github.michael-rapp:android-material-validation:2.0.2@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f134b4e5a11e923ec045ab6676bd81f7/jetified-android-material-validation-2.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f134b4e5a11e923ec045ab6676bd81f7/jetified-android-material-validation-2.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.11.1/transforms/70bacd035163072e6e68ec75c81ea53e/transformed/jetified-android-material-validation-2.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/70bacd035163072e6e68ec75c81ea53e/transformed/jetified-android-material-validation-2.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.11.1/transforms/70bacd035163072e6e68ec75c81ea53e/transformed/jetified-android-material-validation-2.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-material-validation/2.0.2/6adbaf3fe2f70c68425e1a9dd8112f74774a4af/android-material-validation-2.0.2-javadoc.jar!/" />

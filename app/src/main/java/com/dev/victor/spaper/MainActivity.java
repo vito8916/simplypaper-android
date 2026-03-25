@@ -41,9 +41,10 @@ import com.dev.victor.spaper.gcm.RegistrationIntentService;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
+import com.gun0912.tedpermission.normal.TedPermission;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import es.dmoral.prefs.Prefs;
 
@@ -161,16 +162,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, getString(R.string.permisoConcedido), Toast.LENGTH_SHORT).show();
             }
 
-
             @Override
-            public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+            public void onPermissionDenied(List<String> deniedPermissions) {
                 Toast.makeText(MainActivity.this, getString(R.string.permisoDenegado) + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+
             }
 
 
         };
 
-        new TedPermission(this)
+        new TedPermission().create()
                 .setPermissionListener(permissionlistener)
                 .setDeniedMessage(getString(R.string.permisoMsjRechazo))
                 .setPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE,

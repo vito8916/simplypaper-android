@@ -1,6 +1,7 @@
 package com.dev.victor.spaper;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
@@ -48,7 +49,7 @@ import com.dev.victor.spaper.util.VolleySingleton;
 import com.gordonwong.materialsheetfab.MaterialSheetFab;
 import com.gordonwong.materialsheetfab.MaterialSheetFabEventListener;
 import com.gun0912.tedpermission.PermissionListener;
-import com.gun0912.tedpermission.TedPermission;
+import com.gun0912.tedpermission.normal.TedPermission;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,6 +62,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import jp.wasabeef.blurry.Blurry;
 
@@ -214,6 +216,7 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
 
                             //EXTRAER LOS COLORES DEL BITMAP PARA ASIGNARLO AL FAB
                             Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+                                @SuppressLint("ResourceAsColor")
                                 public void onGenerated(Palette p) {
                                     int Color = 0;
 
@@ -616,12 +619,13 @@ public class FullscreenActivity extends AppCompatActivity implements View.OnClic
             }
 
             @Override
-            public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+            public void onPermissionDenied(List<String> deniedPermissions) {
                 Toast.makeText(FullscreenActivity.this, getString(R.string.permisoDenegado) + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+
             }
 
         };
-        new TedPermission(this)
+        new TedPermission().create()
                 .setPermissionListener(permissionlistener)
                 .setRationaleMessage(getString(R.string.permisosGuardarMsj))
                 .setDeniedMessage(getString(R.string.permisoMsjRechazo))
